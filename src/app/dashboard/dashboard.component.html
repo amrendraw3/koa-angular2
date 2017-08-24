@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+<dashboard-header></dashboard-header>
+
+    <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+      <h1>Dashboard</h1>
+
+      <h2>Section title</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Sr. No.</th>
+              <th>Page Name</th>
+              <th>Page Content</th>
+              <th>Active</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let page of pages; let i = index;" >
+              <td> {{i+1}} </td>
+              <td> {{page.name}} </td>
+              <td> {{page.content}} </td>
+              <td> {{page.active}} </td>
+              <td> Edit </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</div>
+<dashboard-footer></dashboard-footer>
